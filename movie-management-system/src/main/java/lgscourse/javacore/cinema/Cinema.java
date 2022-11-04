@@ -74,7 +74,7 @@ public class Cinema implements Serializable {
                 schedules.get(_day).addSeance(seance);
                 System.out.println(seance + " add to cinema schedules on " + _day);
             } else System.out.println("Cannot add this seance to this day");
-        } else System.out.println("Our movie library doesn't contain this movie");
+        } else System.out.println("Our movie library does not contain this movie");
     }
 
     private boolean checkTime(Seance seance, Days _day) {
