@@ -15,8 +15,8 @@ public class Movie implements Serializable, Comparable<Movie> {
             if(title != "" || title != null) {
                 this.title = title;
                 this.duration = duration;
-            }else System.out.println("Incorrect title");
-        } else System.out.println("Duration is too long!");
+            }else System.out.println(" The title is incorrect");
+        } else System.out.println(" The Duration is too long!");
     }
 
     public String getTitle() {
@@ -36,6 +36,8 @@ public class Movie implements Serializable, Comparable<Movie> {
     }
 
     @Override
+    
+    //Planning to introduce constant to prime and result's
     public int hashCode() {
         final int prime = 31;
         int result = 1;
