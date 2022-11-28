@@ -5,10 +5,7 @@ import java.time.LocalTime;
 import java.util.*;
 
 public class Cinema implements Serializable {
-    /**
-     *
-     */
-    private static final long serialVersionUID = 1L;
+  
     private TreeMap<Days, Schedule> schedules;
     private ArrayList<Movie> moviesLibrary;
     private Time open;
