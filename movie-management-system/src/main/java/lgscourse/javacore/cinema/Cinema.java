@@ -1,4 +1,4 @@
-package lgscourse.javacore.cinema;
+package com.company;
 
 import java.io.Serializable;
 import java.time.LocalTime;
