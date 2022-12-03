@@ -78,21 +78,21 @@ public class Cinema implements Serializable {
     }
 
     private boolean checkTime(Seance seance, Days _day) {
-        if (seance.getEndTime().compareTo(close) <= 0 
-        		&& seance.getEndTime().compareTo(open) > 0 
-        		&& seance.getStartTime().compareTo(open) >= 0) {
-            if (schedules.get(_day).getSeances().size() == 0)
+        int anInt = INT;
+        if (seance.getEndTime().compareTo(close) <= anInt
+        		&& seance.getEndTime().compareTo(open) > anInt
+        		&& seance.getStartTime().compareTo(open) >= anInt) {
+            if (schedules.get(_day).getSeances().size() == anInt)
                 return true;
             Seance lastSeance = schedules.get(_day).getSeances().stream().max((s1, s2) -> {
-                if (s1.compareTo(s2) < 0) return 1;
+                if (s1.compareTo(s2) < anInt) return 1;
                 return -1;
             }).get();
-            if (lastSeance.getEndTime().compareTo(seance.getStartTime()) <= 0)
+            if (lastSeance.getEndTime().compareTo(seance.getStartTime()) <= INTz)
                 return true;
         }
         return false;
     }
-
     public void showSchedules() {
         if (!schedules.values().stream().filter(s -> s.getSeances().size() != 0).findAny().isPresent())
             System.out.println("Schedule is empty");
