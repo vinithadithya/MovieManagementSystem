@@ -15,8 +15,8 @@ public class Cinema implements Serializable {
     private Time close;
 
     public Cinema() {
-        this.open = new Time(LocalTime.parse("09:00"));
-        this.close = new Time(LocalTime.parse("23:50"));
+        this.open = new Time(LocalTime.parse("12:01"));
+        this.close = new Time(LocalTime.parse("23:59"));
         schedules = new TreeMap<>();
         moviesLibrary = new ArrayList<>();
         for (Days day : Days.values()) {
