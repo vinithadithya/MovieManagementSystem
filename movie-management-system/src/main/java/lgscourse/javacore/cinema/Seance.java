@@ -1,5 +1,6 @@
 package lgscourse.javacore.cinema;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.function.Function;
 
@@ -7,10 +8,11 @@ public class Seance implements Serializable, Comparable<Seance> {
     /**
      *
      */
+    @Serial
     private static final long serialVersionUID = 1L;
-    private Movie movie;
-    private Time startTime;
-    private Time endTime;
+    private final Movie movie;
+    private final Time startTime;
+    private final Time endTime;
 
     public Seance(Movie movie, Time startTime) {
         this.movie = movie;
@@ -27,24 +29,12 @@ public class Seance implements Serializable, Comparable<Seance> {
         return movie;
     }
 
-    public void setMovie(Movie movie) {
-        this.movie = movie;
-    }
-
     public Time getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Time startTime) {
-        this.startTime = startTime;
-    }
-
     public Time getEndTime() {
         return endTime;
-    }
-
-    public void setEndTime(Time endTime) {
-        this.endTime = endTime;
     }
 
     @Override
@@ -77,11 +67,8 @@ public class Seance implements Serializable, Comparable<Seance> {
         } else if (!movie.equals(other.movie))
             return false;
         if (startTime == null) {
-            if (other.startTime != null)
-                return false;
-        } else if (!startTime.equals(other.startTime))
-            return false;
-        return true;
+            return other.startTime == null;
+        } else return startTime.equals(other.startTime);
     }
 
     @Override
