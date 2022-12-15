@@ -23,6 +23,7 @@ public class Schedule implements Serializable {
 
     public Set<Seance> getSeances() {
         return seances;
+        
     }
 
     @Override

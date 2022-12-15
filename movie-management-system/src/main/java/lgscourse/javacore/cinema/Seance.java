@@ -58,6 +58,8 @@ public class Seance implements Serializable, Comparable<Seance> {
     }
 
     @Override
+    
+    //comparison changes 
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
@@ -85,6 +87,8 @@ public class Seance implements Serializable, Comparable<Seance> {
     }
 
     @Override
+    
+    // comparission changes 
     public int compareTo(Seance o) {
         if (startTime.compareTo(o.startTime) > 0)
             return 1;

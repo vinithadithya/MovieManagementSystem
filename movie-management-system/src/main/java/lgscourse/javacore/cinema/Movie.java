@@ -74,11 +74,14 @@ public class Movie implements Serializable, Comparable<Movie> {
     }
 
     @Override
-    public int compareTo(Movie o) {
-        if (title.compareTo(o.title) > 0)
+  public int compareTo(Movie o) {
+        if (title.compareTo(o.title) > 
+                Movieint)
             return 1;
-        else if(title.compareTo(o.title) < 0)
+        else if(title.compareTo(o.title) < 
+                MovieINT)
             return -1;
         return 0;
     }
 }
+
