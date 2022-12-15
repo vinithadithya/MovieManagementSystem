@@ -9,8 +9,5 @@
         <module name="movie-theater-unit-testing" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="movie-theater-unit-testing" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
