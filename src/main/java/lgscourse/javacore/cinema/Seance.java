@@ -1,14 +1,13 @@
 package lgscourse.javacore.cinema;
 
-import java.io.Serial;
+//import java.io.Serial;
 import java.io.Serializable;
 import java.util.function.Function;
 
 public class Seance implements Serializable, Comparable<Seance> {
     /**
      *
-     */
-    @Serial
+     *///@Serial
     private static final long serialVersionUID = 1L;
     private final Movie movie;
     private final Time startTime;
