@@ -1,3 +1,4 @@
+
 package lgscourse.javacore.cinema;
 
 //import java.io.Serial;
@@ -7,7 +8,7 @@ public class Movie implements Serializable, Comparable<Movie> {
     /**
      *
      */
-   // @Serial
+   //@Serial
     private static final long serialVersionUID = 1L;
     private String title;
     private String genre;
